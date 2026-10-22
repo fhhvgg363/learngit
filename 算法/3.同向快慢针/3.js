@@ -1,0 +1,14 @@
+// 删除有序数组中的重复元素26
+var removeDuplicates = function (nums) {
+  let j = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== nums[j]) {
+      j++;
+      nums[j] = nums[i];
+    }
+  }
+  return j + 1;
+};
+
+console.log(removeDuplicates([1, 1, 2])); // 2
+console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])); // 5
